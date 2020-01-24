@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+  - SQL databases are primarily called as Relational Databases (RDBMS); whereas NoSQL database are primarily called as non-relational or distributed database. SQL databases defines and manipulates data based structured query language (SQL).
+
 - [ ] Why do tables need a `primary key`?
+
+  - each table needs a primary key because it ensures row-level accessibility
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+  - Foreign Key
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+  - a third table
 
 ## Minimum Viable Product
 

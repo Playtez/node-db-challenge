@@ -13,7 +13,7 @@ function find() {
       "tasks.notes",
       "tasks.project_id",
       "projects.project_name",
-      "projects.description"
+      "projects.description as project_description"
     )
     .from("tasks")
     .join("projects", "projects.id", "tasks.project_id");
