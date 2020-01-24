@@ -16,4 +16,16 @@ router.get("/tasks", (req, res) => {
     });
 });
 
+router.post("/tasks", (req, res) => {
+  const newTask = req.body;
+  Tasks.insert(newTask)
+    .then(task => {
+      res.status(200).json(task);
+    })
+    .catch(error => {
+      res.status(500).json({
+        message: "can't find server"
+      });
+    });
+});
 module.exports = router;

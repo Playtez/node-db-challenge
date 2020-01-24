@@ -1,12 +1,24 @@
 const db = require("../data/dbConfig");
 
 module.exports = {
-  find
+  find,
+  insert
 };
 
 function find() {
   return db
-    .select("*")
+    .select(
+      "tasks.id",
+      "tasks.task_description",
+      "tasks.notes",
+      "tasks.project_id",
+      "projects.project_name",
+      "projects.description"
+    )
     .from("tasks")
     .join("projects", "projects.id", "tasks.project_id");
+}
+
+function insert(newTask) {
+  return db("tasks").insert(newTask);
 }
